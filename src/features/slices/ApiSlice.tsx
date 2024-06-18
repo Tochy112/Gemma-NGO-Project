@@ -7,8 +7,7 @@ import {
 } from "@reduxjs/toolkit/query";
 
 const baseQuery = fetchBaseQuery({
-  // baseUrl: `${process.env.NEXT_PUBLIC_API_URL}`,
-  baseUrl: "https://server-aquatrack-community.onrender.com",
+  baseUrl: `${process.env.API_URL}`,
   prepareHeaders: (headers, { getState }) => {
     const state = getState() as RootState;
     const token = state.user?.access_token;

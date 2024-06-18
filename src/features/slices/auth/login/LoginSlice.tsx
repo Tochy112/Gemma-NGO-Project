@@ -29,5 +29,3 @@ export const { setCredentials, logOut } = loginSlice.actions;
 export default loginSlice.reducer;
 
 export const selectCurrentUser = (state: any) => state.login.user;
-
-export const selectCurrentToken = (state: any) => state.login.access_token;
