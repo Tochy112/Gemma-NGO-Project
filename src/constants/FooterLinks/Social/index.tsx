@@ -10,7 +10,7 @@ const FooterSocialLinks: React.FC<Props> = ({ classname }) => {
   return (
     <div className="my-auto">
       <ul className={classname}>
-        <li className="py-4 px-4">
+        <li className="py-4 px-4 lg:px-0 lg:pe-4">
           <Link target={"_blank"} href={"#"}>
             <div>YouTube</div>
           </Link>
@@ -25,7 +25,7 @@ const FooterSocialLinks: React.FC<Props> = ({ classname }) => {
             <div>Twitter </div>
           </Link>
         </li>
-        <li className="py-4 px-4">
+        <li className="py-4 px-4 lg:px-0 lg:ps-4">
           <Link target={"_blank"} href={"#"}>
             <div>LinkedIn </div>
           </Link>

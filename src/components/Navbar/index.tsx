@@ -12,20 +12,19 @@ import { Search } from "@mui/icons-material";
 const Nav = () => {
   const pathname = usePathname();
   const homePage = pathname.startsWith("/");
-  const background = " bg-white xl:bg-transparent"
+  const background = " bg-white xl:bg-transparent";
   const whiteBackground = homePage ? " bg-white" : "bg-transparent";
 
   const PageRoutes = () => {
     return (
       <div>
         <div className="flex items-center h-full mt-auto montserrat">
-            <NavbarRoutes
-              className={"mx-3 font-semibold text-grey-5"}
-              content={"Sign in"}
-              href={""}
-            />
-            <button />
-          </div>
+          <NavbarRoutes
+            className={"mx-3 font-semibold text-grey-5"}
+            content={"Sign in"}
+            href={"/auth/login"}
+          />
+        </div>
       </div>
     );
   };
@@ -39,22 +38,22 @@ const Nav = () => {
           <div
             className={`z-50 ${whiteBackground} py-2 xl:w-auto w-full flex justify-between items-center`}
           >
-             <Link href={"/"}>
+            <Link href={"/"}>
               <h2 className="w-48 ps-5 xl:ps-0">logo comes in here</h2>
             </Link>
-              <ul className="xl:flex hidden items-center gap-8 montserrat">
-                <NavbarRoutes
-                  className={"text-pri-1 text-sm"}
-                  content={"Home"}
-                  href={"/"}
-                />
-                <NavbarRoutes
-                  className={"text-pri-1 text-sm"}
-                  content={"Report a concern"}
-                  href={"/"}
-                />
-                <NavLinks />
-              </ul>
+            <ul className="xl:flex hidden items-center gap-8 montserrat">
+              <NavbarRoutes
+                className={"text-pri-1 text-sm"}
+                content={"Home"}
+                href={"/"}
+              />
+              <NavbarRoutes
+                className={"text-pri-1 text-sm"}
+                content={"Report a concern"}
+                href={"/"}
+              />
+              <NavLinks />
+            </ul>
             <div
               className="text-sm xl:hidden pe-5"
               onClick={() => setOpen(!open)}
@@ -94,3 +93,4 @@ const Nav = () => {
 };
 
 export default Nav;
+
