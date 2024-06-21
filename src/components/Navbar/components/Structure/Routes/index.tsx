@@ -37,3 +37,4 @@ const NavbarRoutes: React.FC<Props> = ({ className, content, href }) => {
 };
 
 export default NavbarRoutes;
+

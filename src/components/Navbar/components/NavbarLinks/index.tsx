@@ -1,4 +1,3 @@
-
 export const NavbarLinks = [
   {
     header: "Our Sections",
@@ -37,3 +36,4 @@ export const NavbarLinks = [
     ],
   }
 ];
+
