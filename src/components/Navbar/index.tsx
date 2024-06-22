@@ -7,7 +7,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { usePathname } from "next/navigation";
 import NavbarRoutes from "./components/Structure/Routes";
-import { Search } from "@mui/icons-material";
+import Image from 'next/image'
+
 
 const Nav = () => {
   const pathname = usePathname();
@@ -39,7 +40,12 @@ const Nav = () => {
             className={`z-50 ${whiteBackground} py-2 xl:w-auto w-full flex justify-between items-center`}
           >
             <Link href={"/"}>
-              <h2 className="w-48 ps-5 xl:ps-0">logo comes in here</h2>
+            <div className='lg:ms-auto w-full '>
+              <div className='relative w-[100%] h-15'>
+                  <Image src="/Gemma-logo.svg" alt="" fill objectFit='cover'/>
+                  <p>image goes in here</p>
+              </div>
+            </div>
             </Link>
             <ul className="xl:flex hidden items-center gap-8 montserrat">
               <NavbarRoutes
