@@ -43,6 +43,7 @@ const NavLinks = () => {
                           key={mylinks.title}
                           title={mylinks.title}
                           href={mylinks.path}
+                          className="text-[#70A5D4]"
                         >
                           {mylinks.description}
                         </ListItem>
