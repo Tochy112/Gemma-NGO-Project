@@ -19,15 +19,12 @@ import {
 
 const NavLinks = () => {
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
-  const linkCheck = isHomePage;
-  const linkCheck2 = linkCheck ? NavbarLinks : linkCheck;
 
   return (
     <>
-      {linkCheck2.map((link) => (
+      {NavbarLinks.map((link:any) => (
         <div key={link.header}>
           <NavigationMenu className="hidden xl:block">
             <NavigationMenuList>
@@ -38,7 +35,7 @@ const NavLinks = () => {
                 {link.links && (
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                      {link.links.map((mylinks) => (
+                      {link.links.map((mylinks:any) => (
                         <ListItem
                           key={mylinks.title}
                           title={mylinks.title}
@@ -80,7 +77,7 @@ const NavLinks = () => {
           `}
           >
             {/* sublinks */}
-            {link.links.map((slinks) => (
+            {link.links.map((slinks:any) => (
               <div key={slinks.title}>
                 <div className="bg-gray-400 me-5 rounded-lg">
                   <Link href={slinks.path}>
