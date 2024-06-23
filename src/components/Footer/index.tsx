@@ -3,10 +3,15 @@
 import React from "react";
 import FooterSocialLinks from "@/constants/FooterLinks/Social";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
 
 const Footer = () => {
+  const pathname = usePathname();
+  const Login = pathname.startsWith("/auth");
+
   return (
-    <div className="relative isolate overflow-hidden bg-white text">
+    <div className={` ${Login ? 'hidden' : 'relative isolate overflow-hidden bg-white text'}`}>
       <div className="grid grid-rows-1 lg:grid-rows-0 lg:grid-cols-2 lg:mx-20 font-semibold">
         <div className="text-[#5D7D97] text-lg">
           <div className="flex flex-col items-center lg:items-start gap-y-3">

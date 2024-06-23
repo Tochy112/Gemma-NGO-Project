@@ -14,88 +14,48 @@ import "./index.css";
 
 const SlideCarousel = () => {
   const plugin = React.useRef(Autoplay({ stopOnInteraction: false }));
+
+  const images = [
+    {
+      index: 1,
+      src: "/image1.png",
+    },
+    {
+      index: 2,
+      src: "/image2.png",
+    },
+    {
+      index: 3,
+      src: "/image3.jpg",
+    },
+    {
+      index: 4,
+      src: "/image4.png",
+    },
+  ]
   return (
     <Carousel className="w-[80%] mx-auto " plugins={[plugin.current]}>
       <CarouselPrevious />
       <CarouselContent className="-ml-1 w-full">
-        <CarouselItem className=" h-auto pl-1 md:basis-1/2 lg:basis-1/3">
+        {
+          images.map((image) => (
+        <CarouselItem className=" h-auto pl-1 md:basis-1/2 lg:basis-1/3" key={image.index}>
           <div className="w-full h-full bg-transparent">
             <div className="my-5">
               <div className="flex mb-4 items-center picture-picker-container">
                 <Image
-                  src={""}
+                  src={image.src}
                   width={256}
                   height={260}
                   alt={""}
-                  className="object-cover rounded-[50%] mx-auto border-2 border-black profile-picture"
+                  className="object-cover mx-auto rounded-xl profile-picture"
                 />
               </div>
             </div>
           </div>
         </CarouselItem>
-
-        <CarouselItem className="w-12 h-auto pl-1 md:basis-1/2 lg:basis-1/3">
-          <div className="w-full h-full bg-transparent">
-            <div className="my-5">
-              <div className="flex mb-4 items-center picture-picker-container">
-                <Image
-                  src={""}
-                  width={256}
-                  height={260}
-                  alt={""}
-                  className="object-cover rounded-[50%] mx-auto border-2 border-black profile-picture"
-                />
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
-
-        <CarouselItem className="w-12 h-auto pl-1 md:basis-1/2 lg:basis-1/3">
-          <div className="w-full h-full bg-transparent">
-            <div className="my-5">
-              <div className="flex mb-4 items-center picture-picker-container">
-                <Image
-                  src={""}
-                  width={256}
-                  height={260}
-                  alt={""}
-                  className="object-cover rounded-[50%] mx-auto border-2 border-black profile-picture"
-                />
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
-
-        <CarouselItem className="w-12 h-auto pl-1 md:basis-1/2 lg:basis-1/3">
-          <div className="w-full h-full bg-transparent">
-            <div className="my-5">
-              <div className="flex mb-4 items-center picture-picker-container">
-                <Image
-                  src={""}
-                  width={256}
-                  height={260}
-                  alt={""}
-                  className="object-cover rounded-[50%] mx-auto border-2 border-black profile-picture"
-                />
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
-        <CarouselItem className="w-12 h-auto pl-1 md:basis-1/2 lg:basis-1/3">
-          <div className="w-full h-full bg-transparent">
-            <div className="mt-5">
-              <div className="flex mb-4 items-center picture-picker-container">
-                <Image
-                  src={""}
-                  width={256}
-                  height={260}
-                  alt={""}
-                  className="object-cover rounded-[50%] mx-auto border-2 border-black profile-picture"
-                />
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
+          ))
+        }
       </CarouselContent>
       <CarouselNext />
     </Carousel>

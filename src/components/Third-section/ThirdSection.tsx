@@ -19,7 +19,7 @@ const ThirdSection = () => {
       </div>
 
      
-      <div className='lg:flex  gap-8'>
+      <div className='md:flex  gap-8'>
         <div className='relative w-[100%] h-60'>
             <Image src="/text-image.jpg" width={400} height={300} alt=" "/>
             <p className='text-white'>About Us</p>

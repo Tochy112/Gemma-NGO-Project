@@ -13,6 +13,9 @@ import Image from 'next/image'
 const Nav = () => {
   const pathname = usePathname();
   const homePage = pathname.startsWith("/");
+  const Login = pathname.startsWith("/auth");
+  const Report = pathname.startsWith("/report-concern");
+  const Route = Login || Report
   const background = " bg-white xl:bg-transparent";
   const whiteBackground = homePage ? " bg-white" : "bg-transparent";
 
@@ -33,7 +36,7 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute xl:bg-transparent xl:relative z-50">
+    <div className={` ${(Login) ? 'hidden': 'absolute xl:bg-transparent xl:relative z-50'}`} >
       <div className={` fixed ${background} w-full xl:relative  xl:py-0`}>
         <div className="flex items-center xl:mx-20 font-sm justify-between">
           <div
@@ -41,7 +44,7 @@ const Nav = () => {
           >
             <Link href={"/"}>
             <div className='lg:ms-auto w-full '>
-              <div className='relative w-[100%] h-15'>
+              <div className='relative w-[100%]'>
                   <Image src="/Gemma-logo.svg" alt="" fill objectFit='cover'/>
                   <p>image goes in here</p>
               </div>
@@ -56,7 +59,7 @@ const Nav = () => {
               <NavbarRoutes
                 className={"text-pri-1 text-sm"}
                 content={"Report a concern"}
-                href={"/"}
+                href={"/report-concern"}
               />
               <NavLinks />
             </ul>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/features/Providers";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins_font = Poppins({ subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600"], variable: "--font-poppins" })
 
 export const metadata: Metadata = {
   title: "Gemma NGO",
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={poppins_font.className}>
+          <Navbar />
+          {children}
+          <Footer />
+          </body>
       </html>
     </Providers>
   );

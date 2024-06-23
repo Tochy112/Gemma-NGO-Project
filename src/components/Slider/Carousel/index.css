@@ -1,7 +1,7 @@
 .profile-picture {
-  width: 206px;
-  height: 200px;
-  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  /* border-radius: 50%; */
 }
 
 .picture-picker-container input[type="file"] {
