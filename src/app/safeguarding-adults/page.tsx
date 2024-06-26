@@ -1,7 +1,7 @@
 import React from 'react'
 import Adults from "@/components/Adults"
 
-const page = () => {
+const SafeguardAdults = () => {
   return (
     <div>
         <Adults />
@@ -9,4 +9,4 @@ const page = () => {
   )
 }
 
-export default page
+export default SafeguardAdults

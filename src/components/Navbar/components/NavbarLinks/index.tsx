@@ -6,34 +6,33 @@ export const NavbarLinks = [
         title: "About us",
         path: "/about-us",
         description:
-          "What does GEMMA’s FOUNDATION do? We save lives, achieve social justice and have a role in preventing the neglect and abuse from children and adults"
+          "What does GEMMA's FOUNDATION do? We save lives, achieve social justice and have a role in preventing the neglect and abuse from children and adults",
       },
       {
         title: "Our Services",
-        path: "/",
-        description: ""
+        path: "/services",
+        description: "",
       },
       {
         title: "Our Mission",
-        path: "/",
-        description: ""
+        path: "/mission",
+        description: "",
       },
       {
         title: "Safeguarding children/young people",
-        path: "/",
+        path: "/safeguarding-children",
         description: "",
       },
       {
         title: "Safeguarding Adults",
         path: "/safeguarding-adults",
-        description: ""
+        description: "",
       },
       {
         title: "Contact Us",
-        path: "/",
-        description: ""
+        path: "/contact",
+        description: "",
       },
     ],
-  }
+  },
 ];
-

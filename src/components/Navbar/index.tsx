@@ -7,15 +7,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { usePathname } from "next/navigation";
 import NavbarRoutes from "./components/Structure/Routes";
-import Image from 'next/image'
-
+import Image from "next/image";
 
 const Nav = () => {
   const pathname = usePathname();
   const homePage = pathname.startsWith("/");
   const Login = pathname.startsWith("/auth");
   const Report = pathname.startsWith("/report-concern");
-  const Route = Login || Report
+  const Route = Login || Report;
   const background = " bg-white xl:bg-transparent";
   const whiteBackground = homePage ? " bg-white" : "bg-transparent";
 
@@ -36,19 +35,23 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={` ${(Login) ? 'hidden': 'absolute xl:bg-transparent xl:relative z-50'}`} >
+    <div
+      className={` ${
+        Login ? "hidden" : "absolute xl:bg-transparent xl:relative z-50"
+      }`}
+    >
       <div className={` fixed ${background} w-full xl:relative  xl:py-0`}>
         <div className="flex items-center xl:mx-20 font-sm justify-between">
           <div
             className={`z-50 ${whiteBackground} py-2 xl:w-auto w-full flex justify-between items-center`}
           >
             <Link href={"/"}>
-            <div className='lg:ms-auto w-full '>
-              <div className='relative w-[100%]'>
-                  <Image src="/Gemma-logo.svg" alt="" fill objectFit='cover'/>
+              <div className="lg:ms-auto w-full ">
+                <div className="relative w-[100%]">
+                  <Image src="/Gemma-logo.svg" alt="" fill objectFit="cover" />
                   <p>image goes in here</p>
+                </div>
               </div>
-            </div>
             </Link>
             <ul className="xl:flex hidden items-center gap-8 montserrat">
               <NavbarRoutes
@@ -93,6 +96,14 @@ const Nav = () => {
                 Home
               </Link>
             </li>
+            <li>
+              <Link
+                href="/report-concern"
+                className="text-pri-1 py-3 px-3 inline-block border-t-0 border-b-2 border-gray-300  w-full"
+              >
+                Report a concern
+              </Link>
+            </li>
             <NavLinks />
           </ul>
         </div>
@@ -102,4 +113,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
