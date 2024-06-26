@@ -19,21 +19,21 @@ const ThirdSection = () => {
       </div>
 
      
-      <div className='md:flex  gap-8'>
+      <div className='md:flex gap-8'>
         <div className='relative w-[100%] h-60'>
-            <Image src="/text-image.jpg" width={400} height={300} alt=" "/>
-            <p className='text-white'>About Us</p>
+            <Image src="/Ellipse-2.png" width={150} height={150} alt=""/>
+            <p className='text-white text-center'>About Us</p>
         </div>
         <div className='relative w-[100%] h-60'>
-            <Image src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <Image src="/Ellipse-3.png" width={150} height={150} alt=""/>
             <p className='text-white'>Children/Young people</p>
         </div>
         <div className='relative w-[100%] h-60'>
-            <Image src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <Image src="/Ellipse-4.png" width={150} height={150} alt=" "/>
             <p className='text-white'> Safeguarding Adults</p>
         </div>
         <div className='relative w-[100%] h-60'>
-            <Image src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <Image src="/Ellipse-5.png" width={150} height={150} alt=" "/>
             <p className='text-white'>Report a concern</p>
         </div>
       </div>

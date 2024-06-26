@@ -24,7 +24,7 @@ const Nav = () => {
       <div>
         <div className="flex items-center h-full mt-auto montserrat">
           <NavbarRoutes
-            className={"mx-3 font-semibold text-grey-5"}
+            className={"mx-3 font-semibold text-grey-5 text-[#08AA38]"}
             content={"Sign in"}
             href={"/auth/login"}
           />
@@ -52,12 +52,12 @@ const Nav = () => {
             </Link>
             <ul className="xl:flex hidden items-center gap-8 montserrat">
               <NavbarRoutes
-                className={"text-pri-1 text-sm"}
+                className={"text-pri-1 text-sm text-[#08AA38]"}
                 content={"Home"}
                 href={"/"}
               />
               <NavbarRoutes
-                className={"text-pri-1 text-sm"}
+                className={"text-pri-1 text-sm text-[#08AA38]"}
                 content={"Report a concern"}
                 href={"/report-concern"}
               />
