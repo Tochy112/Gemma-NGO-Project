@@ -125,9 +125,9 @@ export default function LoginComponent() {
             </form>
           </Form>
           <div className="mt-4 text-center text-sm">
-            Don&apos;t have an account?{" "}
-            <Link href="/auth/register" className="underline">
-              Sign up
+            Go back to{" "}
+            <Link href="/" className="underline">
+              HOME
             </Link>
           </div>
         </CardContent>

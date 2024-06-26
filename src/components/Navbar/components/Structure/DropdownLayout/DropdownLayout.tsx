@@ -29,7 +29,7 @@ const NavLinks = () => {
           <NavigationMenu className="hidden xl:block">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="py-7 xl:py-3 flex text-sm text-grey-5 justify-between h-[20px] items-center xl:pr-0 pr-5 group">
+                <NavigationMenuTrigger className="py-7 xl:py-3 flex text-sm text-grey-5 text-[#08AA38] justify-between h-[20px] items-center xl:pr-0 pr-5 group">
                   {link.header}
                 </NavigationMenuTrigger>
                 {link.links && (
@@ -40,7 +40,7 @@ const NavLinks = () => {
                           key={mylinks.title}
                           title={mylinks.title}
                           href={mylinks.path}
-                          className="text-[#70A5D4]"
+                          className="text-[#08AA38]"
                         >
                           {mylinks.description}
                         </ListItem>
@@ -61,6 +61,8 @@ const NavLinks = () => {
                   ? setHeading(link.header)
                   : setHeading("");
               }}
+              // onClick={() => setOpen(!open)}
+
             >
               {link.header}
               <span className="text-xl xl:hidden inline">
