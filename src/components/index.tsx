@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "./Slider";
-import FirstSection from "./First-section/FirstSection";
+import Hero from "./Hero/hero";
 import ThirdSection from "./Third-section/ThirdSection";
 
 const HomeComponent = () => {
   return (
     <div>
-      <FirstSection />
+      <Hero />
       <Slider />
       <ThirdSection />
     </div>

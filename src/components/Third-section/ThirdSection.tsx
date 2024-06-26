@@ -7,7 +7,7 @@ const ThirdSection = () => {
       <div>
         <h3 className='lg:text-xl text-white mb-5'>Welcome To</h3>
         <h1 className='font-bold lg:text-5xl text-xl  text-white mb-9'>
-            <span className='text-[#08AA38]'>GEMMA'S</span> FOUNDATION
+            <span className='text-[#08AA38]'>GEMMA&apos;S</span> FOUNDATION
         </h1>
 
         <h3 className='lg:text-xl text-white mb-5'>
@@ -19,22 +19,22 @@ const ThirdSection = () => {
       </div>
 
      
-      <div className='md:flex gap-8'>
-        <div className='relative w-[100%] h-60'>
-            <Image src="/Ellipse-2.png" width={150} height={150} alt=""/>
-            <p className='text-white text-center'>About Us</p>
+      <div className='sm:flex gap-8'>
+        <div className='relative justify-center flex flex-col my-20 h-60'>
+            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <p className='text-white mt-2'>About Us</p>
         </div>
-        <div className='relative w-[100%] h-60'>
-            <Image src="/Ellipse-3.png" width={150} height={150} alt=""/>
-            <p className='text-white'>Children/Young people</p>
+        <div className='relative justify-center flex flex-col my-20 h-60'>
+            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <p className='text-white mt-2'>Children/Young people</p>
         </div>
-        <div className='relative w-[100%] h-60'>
-            <Image src="/Ellipse-4.png" width={150} height={150} alt=" "/>
-            <p className='text-white'> Safeguarding Adults</p>
+        <div className='relative justify-center flex flex-col my-20 h-60'>
+            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <p className='text-white mt-2'> Safeguarding Adults</p>
         </div>
-        <div className='relative w-[100%] h-60'>
-            <Image src="/Ellipse-5.png" width={150} height={150} alt=" "/>
-            <p className='text-white'>Report a concern</p>
+        <div className='relative justify-center flex flex-col my-20 h-60'>
+            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
+            <p className='text-white mt-2'>Report a concern</p>
         </div>
       </div>
       
