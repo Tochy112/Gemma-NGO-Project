@@ -21,6 +21,7 @@ const NavLinks = () => {
   const pathname = usePathname();
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -61,7 +62,6 @@ const NavLinks = () => {
                   ? setHeading(link.header)
                   : setHeading("");
               }}
-              // onClick={() => setOpen(!open)}
 
             >
               {link.header}

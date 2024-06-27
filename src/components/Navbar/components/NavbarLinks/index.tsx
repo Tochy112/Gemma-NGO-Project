@@ -5,8 +5,7 @@ export const NavbarLinks = [
       {
         title: "About us",
         path: "/about-us",
-        description:
-          "What does GEMMA's FOUNDATION do? We save lives, achieve social justice and have a role in preventing the neglect and abuse from children and adults",
+        description: "What does GEMMA's FOUNDATION do? We save lives...",
       },
       {
         title: "Our Services",

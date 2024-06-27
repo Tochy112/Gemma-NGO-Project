@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const ThirdSection = () => {
   return (
@@ -19,23 +20,36 @@ const ThirdSection = () => {
       </div>
 
      
-      <div className='sm:flex gap-8'>
-        <div className='relative justify-center flex flex-col my-20 h-60'>
-            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
-            <p className='text-white mt-2'>About Us</p>
-        </div>
-        <div className='relative justify-center flex flex-col my-20 h-60'>
-            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
-            <p className='text-white mt-2'>Children/Young people</p>
-        </div>
-        <div className='relative justify-center flex flex-col my-20 h-60'>
-            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
-            <p className='text-white mt-2'> Safeguarding Adults</p>
-        </div>
-        <div className='relative justify-center flex flex-col my-20 h-60'>
-            <Image className="mx-auto rounded-3xl" src="/text-image.jpg" width={400} height={300} alt=" "/>
+      <div className='flex flex-col sm:flex-row justify-between w-full'>
+        <Link href={"/about-us"}>
+          <div className=' justify-center flex flex-col h-60'>
+              <Image className="mx-auto rounded-3xl" src="/Ellipse-2.png" width={150} height={150} alt=" "/>
+              <p className='text-white mt-2'>About Us</p>
+          </div>
+         </Link>
+
+         <Link href={"/safeguarding-children"}> 
+          <div className=' justify-center flex flex-col  h-60'>
+              <Image className="mx-auto rounded-3xl" src="/Ellipse-3.png" width={150} height={150} alt=" "/>
+              <p className='text-white mt-2'>Children/Young people</p>
+          </div>
+         </Link>
+
+         <Link href={"/safeguarding-adults"}>
+            <div className=' justify-center flex flex-col h-60'>
+                <Image className="mx-auto rounded-3xl" src="/Ellipse-4.png" width={150} height={150} alt=" "/>
+                <p className='text-white mt-2'> Safeguarding Adults</p>
+            </div>
+          </Link>
+
+          <Link href={"/report-concern"}>
+          <div className=' justify-center flex flex-col h-60'>
+            <Image className="mx-auto rounded-3xl" src="/Ellipse-5.png" width={150} height={150} alt=" "/>
             <p className='text-white mt-2'>Report a concern</p>
-        </div>
+          </div>  
+          </Link>
+
+       
       </div>
       
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const FirstSection = () => {
   return (
@@ -12,13 +13,14 @@ const FirstSection = () => {
         Working in partnership to enable adults in Nigeria to live a life free from fear, harm and abuse.
       </h2>
 
-      <button className='lg:p-5 p-3 bg-[#08AA38] text-white rounded-lg '>About us</button>
+      <Link href={"/contact"}>
+      <button className='lg:p-5 p-3 bg-[#08AA38] text-white rounded-lg '>Contact us</button>
+      </Link>
       </div>
 
       <div className='lg:ms-auto w-full lg:p-9'>
-        <div className='relative w-[100%] h-60'>
-            <Image src="/text-image.jpg" alt="" fill objectFit='cover'/>
-            <p>image goes in here</p>
+        <div className='relative w-[100%] h-60 '>
+            <Image src="/hero-image.jpg" alt="" fill objectFit='cover'/>
         </div>
       </div>
     </div>

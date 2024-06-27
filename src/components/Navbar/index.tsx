@@ -87,6 +87,7 @@ const Nav = () => {
             className={`xl:hidden ${background} z-10 montserrat fixed w-full top-0 bottom-0 py-24 px-4 duration-500 ${
               open ? "left-0" : "left-[-100%]"
             } cursor-pointer overflow-y-scroll sm:overflow-y-hidden`}
+            onClick={() => setOpen(!open)}
           >
             <li>
               <Link
