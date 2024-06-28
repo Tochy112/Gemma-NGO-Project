@@ -3,8 +3,13 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/features/Providers";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "@/components/ui/toaster";
 
-const poppins_font = Poppins({ subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600"], variable: "--font-poppins" })
+const poppins_font = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Gemma NGO",
@@ -23,7 +28,8 @@ export default function RootLayout({
         <body className={poppins_font.className}>
           <Navbar />
           {children}
-          </body>
+          <Toaster />
+        </body>
       </html>
     </Providers>
   );

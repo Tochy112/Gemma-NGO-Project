@@ -7,7 +7,7 @@ import {
 } from "@reduxjs/toolkit/query";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: `${process.env.API_URL}`,
+  baseUrl: "https://gemma-backend-k3rp.onrender.com/api/v1",
   prepareHeaders: (headers, { getState }) => {
     const state = getState() as RootState;
     const token = state.user?.access_token;
@@ -35,5 +35,6 @@ const CustomBaseQuery: BaseQueryFn<
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: CustomBaseQuery,
+  tagTypes: ["MailList", "User"],
   endpoints: () => ({}),
 });
