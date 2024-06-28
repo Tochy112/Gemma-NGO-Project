@@ -47,9 +47,8 @@ const Nav = () => {
           >
             <Link href={"/"}>
               <div className="lg:ms-auto w-full ">
-                <div className="relative w-[100%]">
-                  <Image src="/Gemma-logo.svg" alt="" fill objectFit="cover" />
-                  <p>image goes in here</p>
+                <div className="relative w-40 h-14">
+                  <Image src="/Gemma-logo.svg" alt="" fill />
                 </div>
               </div>
             </Link>

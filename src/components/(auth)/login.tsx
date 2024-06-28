@@ -47,7 +47,7 @@ export default function LoginComponent() {
       dispatch(setCredentials({ ...res }));
       form.setValue("email", "");
       form.setValue("password", "");
-      router.push("/community/advertisement");
+      router.push("/mail-list");
     } catch (error) {
       console.error(error);
     }
@@ -114,11 +114,7 @@ export default function LoginComponent() {
                     )}
                   />
                 </div>
-                <Button
-                  type="submit"
-                  className="w-full"
-                  disabled={isLoading}
-                >
+                <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? "Loading..." : "Log in"}
                 </Button>
               </div>

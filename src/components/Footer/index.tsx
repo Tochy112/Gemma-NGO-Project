@@ -4,6 +4,7 @@ import React from "react";
 import FooterSocialLinks from "@/constants/FooterLinks/Social";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import NewsletterForm from "./NewsletterForm";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ const Footer = () => {
         Login ? "hidden" : "relative isolate overflow-hidden bg-white text"
       }`}
     >
-      <div className="grid grid-rows-1 lg:grid-rows-0 lg:grid-cols-2 lg:mx-20 font-semibold text-xs lg:text-base my-8">
+      <div className="grid grid-rows-1 lg:grid-rows-0 items-center lg:grid-cols-3 lg:ms-20 font-semibold text-xs lg:text-base my-8">
         <div className="text-[#5D7D97]">
           <div className="flex flex-col items-center lg:items-start">
             <div className="w-40 h-14 relative flex my-3">
@@ -28,7 +29,7 @@ const Footer = () => {
             <FooterSocialLinks classname={"lg:flex lg:my-3 text-center"} />
           </div>
         </div>
-        <div className="text-[#5D7D97] lg:ms-auto mt-5 h-full">
+        <div className="text-[#5D7D97] lg:ms-auto">
           <div className="flex flex-col my-3 items-center lg:items-start">
             Call us to report a problem
             <span className="text-[#37C190]">0816216912</span>
@@ -39,6 +40,18 @@ const Footer = () => {
           <div className="flex flex-col my-3 items-center lg:items-start">
             Speak to us
             <span className="text-[#37C190]">nancygemma3@gmail.com</span>
+          </div>
+        </div>
+        <div className="w-full font-normal mt-5 lg:mt-0 text-sm xl:text-base md:me-10">
+          <h3 className="font-bold pb-3 pt-2 text-center text-[#03579F]">
+            Subscribe to Our Newsletter
+          </h3>
+          <div>
+            <NewsletterForm />
+          </div>
+          <div className="text-[#03579F] text-center mx-[10%] text-xs mt-5">
+            By subscribing, you agree to our Privacy policy and consent to
+            receive updates
           </div>
         </div>
       </div>
