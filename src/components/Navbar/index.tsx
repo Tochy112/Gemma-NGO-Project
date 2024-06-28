@@ -47,9 +47,8 @@ const Nav = () => {
           >
             <Link href={"/"}>
               <div className="lg:ms-auto w-full ">
-                <div className="relative w-[100%]">
-                  <Image src="/Gemma-logo.svg" alt="" fill objectFit="cover" />
-                  <p>image goes in here</p>
+                <div className="relative w-40 h-14">
+                  <Image src="/Gemma-logo.svg" alt="" fill />
                 </div>
               </div>
             </Link>
@@ -104,6 +103,11 @@ const Nav = () => {
               >
                 Report a concern
               </Link>
+            </li>
+            <li
+              className="text-pri-1 py-3 px-3 inline-block border-t-0 border-b-2 border-gray-300  w-full"
+            >
+            <PageRoutes />
             </li>
             <NavLinks />
           </ul>
